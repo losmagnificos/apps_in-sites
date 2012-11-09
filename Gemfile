@@ -4,10 +4,10 @@ gem 'rails', '3.1.0'
 
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
-
-gem 'sqlite3'
-
-
+group :development do 
+  gem 'sqlite3','1.3.5'
+  
+end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
@@ -17,7 +17,7 @@ group :assets do
   gem 'therubyracer'
 end
 
-gem 'jquery-rails'
+gem 'jquery-rails' 
 
 # Use unicorn as the web server
 # gem 'unicorn'
@@ -27,6 +27,10 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'ruby-debug19', :require => 'ruby-debug'
+
+group :prodution do 
+    gem 'pg','0.12.2'
+end
 
 group :test do
   # Pretty printed test output
